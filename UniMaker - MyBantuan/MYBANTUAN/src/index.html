@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MyBantuan</title>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+    
+    <style>
+
+        .divider {
+            width: auto;
+            height: 7px;
+        }
+        /* Add a gray background color and some padding to the footer */
+        footer {
+            background-color: transparent;
+            padding: 25px;
+        }
+
+        .header {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #373737;
+            text-align: center
+        }
+
+        .carousel-inner img {
+            width: 100%; /* Set width to 100% */
+            min-height: 500px;
+        }
+
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 800px) {
+            .carousel-caption {
+                display: none;
+            }
+
+            .login-container {
+                margin-top: 15px;
+            }
+
+            .col-sm-8 {
+                padding-right:20px;
+            }
+        }
+
+        .main-container {
+            background-color: rgba(132, 170, 82, 0.5);
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 25px
+        }
+
+        .container-fluid {
+            padding: 20px;
+        }
+
+        .login-container {
+            height: 242px;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #72ba54;
+            padding: 15px;
+            color: #373737;
+            border-radius: 15px
+        }
+
+        .verify-container {
+            height: 242px;
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: #72ba54;
+            padding: 15px;
+            margin-top: 15px;
+            color: #373737;
+            border-radius: 15px;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #373737;
+            border-color: #373737; /*set the color you want here*/
+        }
+        .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color:#4c4c4c;
+            border-color: #373737; /*set the color you want here*/
+        }
+    </style>
+</head>
+<body style="background-image: url(images/bc-image2.jpg)">
+
+        <div class="container-fluid">
+            <div class="header">
+                <h1> MYBANTUAN</h1>
+            </div>
+            <br />
+
+            <div class="main-container">
+                <div class="row">
+                    <div class="col-sm-8" style="padding-right:0px">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <img src="Images/zakat.jpg" alt="Image" />
+                                    <div class="carousel-caption">
+                                        <h3></h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+
+                                <div class="item">
+                                    <img src="Images/zakat.jpg" alt="Image">
+                                    <div class="carousel-caption">
+                                        <h3>/h3>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="login-container">
+                            <p><strong>Agency Login </strong><br /><small> Download <a href="https://metamask.io/">Metamask</a> to login</small></p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <form action="AddAgency.html">
+                                <button type="submit" class="btn btn-primary btn-block" onclick="location.href" >Login</button>
+                            </form>
+                            
+                            <div class="divider"></div>
+                        </div>
+                        <div class="verify-container">
+                            <p><strong> Verify Recipient </strong><br /><small> Enter recipient's ID to verify status </small></p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <form onSubmit="App.verificationRecipient(); return false;" >
+                                    <div class="input-group">   
+                                        <input type="text" class="form-control" id="VerifyIC" placeholder=" Enter Recipient IC" />
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-primary" id="verify-ic" onclick="verificationRecipient()" type="submit">Check</button>
+                                        </span>
+                                    </div>
+                                  </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+</body>
+
+
+</html>
